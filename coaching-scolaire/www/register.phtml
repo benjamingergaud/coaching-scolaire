@@ -1,0 +1,47 @@
+<?php if ($userSession->isLogged()):?>
+<main class ="container register">
+    <div class="error">
+        <p><?= $error ?></p>
+    </div>
+    <h2><span>Inscription à l'espace administrateur</span></h2>
+    <form method="post">
+        <ul>
+            <li>
+                <label for="firstname">Votre nom:</label>
+                <input id="firstname" type="text" name="firstname" placeholder="nom"
+                       data-required
+                       data-name="prénom"
+                >
+                <p class="error">&nbsp;</p>
+            </li>
+            <li>
+                <label for="lastname">Votre prénom:</label>
+                <input id="lastname" type="text" name="lastname" placeholder="prénom"
+                       data-required
+                       data-name="nom"
+                >
+                <p class="error">&nbsp;</p>
+            </li>
+            <li>
+                <label for="email">Votre mail:</label>
+                <input type="text" name="email" placeholder="adresse mail" data-required data-type="email">
+                <p class="error">&nbsp;</p>
+            </li>
+            <li>
+                <label for="mdp">Votre mot de passe:</label>
+                <input id="mdp" type="password" name="password" placeholder="mot de passe"
+                       data-required
+                       data-min="6"
+                       data-name="mot de passe"
+                       data-type="password"
+                >
+                <p class="error">&nbsp;</p>
+            </li>
+            <li>
+                <button type="submit" name="register" value="Inscription">Valider</button>
+            </li>
+        </ul>
+    </form>
+</main>
+<?php else: header("Location:index.php?page=login");?>
+<?php endif;?>

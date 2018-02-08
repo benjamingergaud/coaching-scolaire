@@ -1,0 +1,750 @@
+html {
+    font-size:62.5%;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'PT Serif', serif;
+    text-align:center;
+    background-image:url(../img/Darkgrey-pattern.png);
+    color: #565656;
+    box-sizing: border-box;
+
+}
+.button{
+    color:#565656;
+}
+.container{
+    max-width:1200px;
+    width:80%;
+    margin:0 auto;
+    overflow: auto;
+    padding:20px;
+    text-align:center;
+}
+table tr.archives{
+    background-color: #eee;
+    color: #E91E63;
+    font-weight: bold;
+}
+
+img {
+    max-width:100%
+}
+
+header h1 {
+    color:#90797D;
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.8em;
+    line-height: 1.6;
+
+}
+
+.flex {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.column {
+    flex-direction: column;
+
+}
+
+form ul li {
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+h2 span {
+    font-weight: bold;
+    font-size: 3rem;
+    position: relative;
+}
+
+label:not(.textarea) {
+    width: 28%;
+    display: inline-block;
+}
+
+/* ------- HEADER ------- */
+
+/******* PROBLEME AVEC LES AUTRES PAGES QUAND POSITION FIXED ****/
+
+#header-nav {
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 10;
+    max-height:310px;
+}
+
+main {
+    margin-top:310px; /*hauteur actuelle du header */
+}
+
+/* ---  NAV 1 ---  */
+
+header #discover {
+    background-color: #E2DEDB;
+    box-shadow: 0 0 5px  darkgrey;
+}
+
+header img, header h1 {
+    vertical-align:middle;
+    font-style:italic;
+    display:inline-block;
+    margin-bottom:5px;
+}
+
+#discover a {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+
+/* ---  NAV 2 ---  */
+
+#nav {
+    box-shadow: 0 0 5px  darkgrey;
+    background-color: #D9D3C7;
+}
+
+#nav > div:hover{
+    background-color:#E1906A;
+}
+#nav > div {
+    position:relative;      /* permet à l'enfant d'etre bien positioné */
+    line-height: 4;         /* au lieu d'un padding fait que l'enfant n'empiète pas sur le bouton */
+
+
+    color:black;
+    font-size:2em;
+    font-weight:bold;
+    font-family:"Playball", cursive;
+    transition:background-color 500ms, color 500ms;
+    text-decoration:none;
+}
+
+#nav div a {
+    color:black;
+    font-weight:bold;
+    font-family:"Playball", cursive;
+    transition:background-color 500ms, color 500ms;
+    text-decoration:none;
+}
+
+#nav > *{
+    flex-basis:25%;
+}
+#nav > div:hover .sub-menu{
+    display:block;         /* c'est ce qui fait apparaitre le sous menu */
+    transition: 1s;
+}
+
+#nav div i.fa {
+    color:#8E7281;
+    padding-right:8px;
+    font-size: 1.2em;
+}
+
+
+.sub-menu{
+    display:none;
+    position: absolute;
+    width: 100%;
+
+    box-sizing:border-box;
+    margin: 0;
+    list-style: none;
+    padding:10px;
+    background-color: #D9D3C7;
+}
+
+
+#nav .sub-menu a, a {
+    text-decoration:none;
+    color:black;
+}
+
+#nav .sub-menu li {
+    text-align:justify;
+    margin-left:10px;
+}
+
+.sub-menu > li:hover {
+    width:100%;
+    font-size:1.2em;
+}
+
+
+
+/******************   HOME CONTENT PAGE   ************************/
+
+
+/* ------- PRESENTATION ------- */
+
+#Julie {
+    background-color: #E1906A;
+    margin-top:10px;
+    box-shadow: 0 0 20px  darkgrey;
+}
+
+#Julie img {
+    border-radius:50%;
+    width:180px;
+    box-shadow: 0 0 15px darkgrey;
+}
+
+#Julie p {
+    color:white;
+    padding-bottom:10px;
+    font-size:2rem;
+    margin-bottom:1px;
+}
+
+#presentation {
+    background-color:white;
+    box-shadow: 0 0 15px darkgrey;
+    padding:1.4em;
+}
+
+#presentation p {
+    margin-top:10px;
+    padding-left:1.5em;
+    padding-right:1.5em;
+}
+
+#presentation p span {
+    font-weight:bold;
+    color:black;
+}
+
+
+
+/* ----- ACTIONS -----*/
+
+#actions {
+    background-color:#8E7281;
+    box-shadow: 0 0 10px darkgrey;
+    width:80%;
+    margin: 0 auto;
+    margin-top:35px;
+    margin-bottom:30px;
+}
+
+p.actions {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+main section h2 {
+    padding-top:20px;
+    margin-top:0;
+    font-size:2.5em;
+}
+
+#actions #columns a {
+    text-decoration:none;
+    background-color:white;
+    box-sizing:border-box;
+    flex-basis:23%;
+    font-size:1.9em;
+    padding:25px;
+    margin:10px;
+    color:#5D342D;
+    box-shadow: 2px 2px 2px lightgrey;
+    font-weight:bold;
+}
+
+#columns {
+    flex-wrap:wrap;
+
+    padding-bottom:20px;
+    margin-bottom:2.5rem;
+}
+
+#columns .fa {
+    display:block;
+    padding-bottom:10px;
+    font-size:4rem;
+    color:#5D342D;
+}
+
+#actions #columns a:hover {
+    border:3px solid white;
+    border-bottom: 5px solid #5D342D;
+    background-color:white;
+    opacity:1;
+}
+
+
+#columns:hover a {
+    background-color:white;
+    opacity:0.3;
+    transition:opacity 0.5s;
+}
+
+
+/****************  END OF HOME CONTENT PAGE *********************/
+
+
+/* -------------  FOOTER --------------- */
+
+footer{
+    background-color:#E2DEDB;
+    padding:15px;
+    padding-bottom:5px;
+    box-shadow: 0 0 5px  darkgrey;
+}
+
+footer img {
+    width:5%;
+    padding-top:10px;
+    padding-bottom:5px;
+    margin-top:5px;
+}
+
+footer nav a {
+    text-decoration:none;
+    font-family:"Playball", cursive;
+    color:black;
+    font-size:1.8rem;
+}
+
+footer nav .fa {
+    padding-right:5px;
+}
+
+footer nav a:hover {
+    color:white;
+    font-size:2rem;
+}
+
+footer nav a:hover:last-of-type {
+    box-shadow:6px 6px 6px darkgrey;
+    color:#8E7281;
+    background-color:white;
+    text-transform:uppercase;
+    border-radius:5px;
+    padding:5px;
+    font-size:1.5rem;
+}
+
+footer p {
+    margin-bottom:2px;
+    font-size:1.7rem;
+}
+
+
+/**** Les différents points à travailler (methodo, gestion mentale, motivation, ...) ****/
+
+.gestion_mentale, .mind_mapping, .organisation, .motivation, .temps, .methodologie, .definition, .contact ,.tarifs{
+    background-color:white;
+    box-shadow: 5px 5px 5px darkgrey;
+}
+
+.gestion_mentale #mental_title span, .mind_mapping #mapping_title span, #organisation span, #motivation span, #temps span, #methodologie span, #definition span, #contact span {
+    color: #565656;
+    font-size:3rem;
+}
+
+.gestion_mentale p, .motivation p, .temps p, .organisation p, .methodologie p, .definition p {
+    padding:10px 60px;
+}
+
+p span {
+    color:black;
+}
+
+h3 {
+    font-size:2.5em;
+}
+
+h4 {
+    font-size:2em;
+}
+#infobulle{
+    font-size: 70%;
+    position: fixed;
+    z-index: 10;
+    bottom: 1%;
+    right: 1%;
+    width: 255px;
+    height: 95px;
+    /*display: flex;
+    align-items: flex-end;*/
+    background-size: cover;
+    flex-wrap: wrap;
+    background: url("../img/bulle.svg") center no-repeat;
+}
+#infobulle h4 {
+    margin-top:20px;
+
+
+}
+#contact-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+#contact-flex #left, #contact-flex #right{
+    flex-basis: 48%;
+    width: 48%;
+}
+#right{
+    margin-left: 2%;
+}
+.imageinfo{
+    height: 250px;
+    width: auto;
+}
+.right{
+    float :right;
+    width:20%;
+    height: 20%;
+    display: inline-block;
+}
+#motivation p {
+    display: inline-block;
+}
+.contact p  {
+    text-align:justify;
+    margin-top:20px;
+    margin-left:60px;
+}
+.contact a{
+    color: #565656;
+}
+.contact p:first-of-type {
+    margin-top:40px;
+}
+.contact p.error:first-of-type{
+    margin-top: 5px;
+}
+.contact img {
+    border-radius: 50%;
+    width: 180px;
+    box-shadow: 0 0 15px darkgrey;
+}
+
+/***** FORMULAIRE DE PREMIER CONTACT ****/
+
+
+/***** LOGIN *****/
+
+.error {
+    content: "test";
+    margin-top: 0;
+    text-align: center;
+    color: red;
+    font-style: italic;
+    margin-right: 20px;
+    font-size:1.5em;
+}
+
+ul {
+    padding-left:0px;
+}
+
+.login form {
+    background-color:#E1906A;
+    box-shadow: 5px 5px 5px  darkgrey;
+
+}
+
+.login label {
+    color:white;
+    font-size:1.6rem;
+    font-weight:bold;
+    margin-right:15px;
+}
+
+.login ul {
+    padding:10px;
+    padding-top:30px;
+}
+
+.login input {
+    padding:6px;
+    font-size:1.4rem;
+}
+
+.login form input::-webkit-input-placeholder {
+    font-family:"Alegreya", serif;
+    color: #555655;
+    font-size:1.4rem;
+    opacity:0.5;
+}
+
+.login button{
+    margin:auto;
+    border:0;
+    padding:1rem 2rem;
+    margin-bottom:2rem;
+    margin-top:2rem;
+    color: #565656;
+    font-size:1.6em;
+    background-color:white;
+    box-shadow: 0 0 8px  darkgrey;
+}
+
+.login button:hover {
+    opacity:0.6;
+    transition:opacity 0.5s;
+}
+
+
+/**** REGISTER ****/
+
+input:focus, textarea:focus, button:focus {
+    box-shadow:0 0 8px darkgrey;
+}
+
+.register form, .premier_contact form , form{
+    text-align:justify;
+}
+
+.register form li:last-of-type, .premier_contact form li:last-of-type,form li:last-of-type {
+    text-align:center;
+}
+
+.register h2, .premier_contact h2 {
+    margin-bottom:5rem;
+}
+
+.register #firstname, .register #lastname, .register #identifiant, .register #mdp {
+    width:25%;
+    text-align:justify;
+}
+
+.register label, .premier_contact label , .contact label{
+    width:30%;
+    vertical-align: top;
+    font-size:1.8rem;
+    margin-top: 10px;
+}
+.contact label {
+    width: 25%;
+}
+.contact fieldset{
+    border-radius: 15px ;
+    border:solid 2px #999;
+}
+.register button, .premier_contact button ,.contact [type="submit"]{
+    margin:auto;
+    border:0;
+    padding:2rem 3rem;
+    margin-bottom:2rem;
+    margin-top:2rem;
+    color:white;
+    font-size:1.6em;
+    background-color:#90797D;
+}
+
+button:hover {
+    opacity:0.6;
+}
+
+.register input, .premier_contact input , .contact input {
+    background-size:40px;
+    background-position: 1rem 50%;
+    border-radius:10px;
+    width:35%;
+}
+.premier_contact textarea , .contact textarea{
+    background-size:40px;
+    background-position: 1rem 1rem;
+    border-radius:10px;
+    width:50%;
+}
+
+.register input, .premier_contact input, .premier_contact textarea , .contact textarea , .contact input{
+    margin: 1rem auto;
+    padding:2rem;
+    padding-left:70px;
+    border: 1px solid #ccc;
+    outline:0;
+    background-color:white;
+    opacity:0.8;
+    background-repeat:no-repeat;
+    font-size:1.5rem;
+    border-radius:10px;
+    margin-left:20px;
+}
+
+[name="name"]{background-image:url('../img/bg_form_name.svg');}
+[name="lastname"]{background-image:url('../img/bg_form_name.svg');}
+[name="mdp"]{background-image:url('../img/bg_form_name.svg');}
+[name="âge"]{background-image:url('../img/bg_form_name.svg');}
+[name="number"]{background-image:url('../img/bg_form_name.svg');}
+[name="contact"]{background-image:url('../img/bg_form_name.svg');}
+[name="school"]{background-image:url('../img/bg_form_name.svg');}
+[name="niveau_etude"]{background-image:url('../img/bg_form_name.svg');}
+[name="mail"]{background-image:url('../img/bg_form_mail.svg');}
+[name="options"]{background-image:url('../img/bg_form_message.svg');}
+[name="results"]{background-image:url('../img/bg_form_message.svg');}
+[name="motivation"]{background-image:url('../img/bg_form_message.svg');}
+[name="question"]{background-image:url('../img/bg_form_message.svg');}
+[name="attentes"]{background-image:url('../img/bg_form_message.svg');}
+
+.register form ul, .premier_contact form ul {
+    padding: 0;
+}
+
+.premier_contact p {
+    text-align:center;
+    font-weight:bold;
+}
+
+/***** SECTION ADMIN  *****/
+
+
+#admin caption {
+    font-size:2.5em;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+#admin i.fa {
+    color: #51533F;
+}
+
+#admin td a i.fa {
+    font-size:1.5em;
+    margin: 10px;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 99%;
+    margin:0 auto;
+
+}
+
+#form h2 {
+    margin-bottom: 40px;
+}
+
+th, td {
+    text-align: left;
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+th {
+    background-color:#D9D3C7;
+    color: #464747;
+    font-weight:bold;
+    font-size:2em;
+    border: 2px solid darkgrey;
+    border-right:none;
+    border-left:none;
+
+}
+
+td {
+    border : 1px solid #ccc;
+    font-size:1.5em;
+}
+
+tbody tr:last-child{
+    border-bottom:2px solid darkgrey;
+}
+
+tbody tr:hover {
+    background-color: #C2BEBA;
+    transition:background-color 0.5s;
+
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2
+}
+
+tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+/* --------------- TARIFS ---------------------*/
+.orange{
+    color: #EF6C00;
+}
+.tarifs strong{
+    color: #000;
+    font-size: 2rem;
+}
+.tarifs p {
+    color: #777;
+    font-size: 1.8rem;
+}
+.title{
+    font-size: 3rem;
+    color: #565656;
+    text-align: center;
+}
+.contact p {
+    text-align: left;
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+
+    #contact-flex{
+        flex-direction: column;
+    }
+     main #contact-flex #left , main #contact-flex #right {
+        flex-basis:100% ;
+        width: 100%;
+    }
+    #admin table tr >*:nth-child(3),#admin table tr >*:nth-child(4),#admin table tr >*:nth-child(7){
+        display: none;
+    }
+    .nav-text {
+        display: none;
+    }
+    #infobulle {
+        display: none;
+    }
+    #actions #columns a {
+        flex-basis: 45%;
+        margin:5px;
+        padding:2%;
+    }
+    .contact p {
+        text-align: left;
+    }
+}
+@media screen and (max-width:768px) {
+
+    #contact-flex{
+        flex-direction: column;
+    }
+    main #contact-flex #left , main #contact-flex #right {
+        flex-basis:100% ;
+        width: 100%;
+    }
+    #admin table tr >*:nth-child(2),#admin table tr >*:nth-child(3),#admin table tr >*:nth-child(4),#admin table tr >*:nth-child(5),#admin table tr >*:nth-child(6),#admin table tr >*:nth-child(7){
+        display: none;
+    }
+    .nav-text {
+        display: none;
+    }
+    #infobulle {
+        display: none;
+    }
+    #actions #columns a {
+        flex-basis: 90%;
+        margin: 5px auto;
+        padding:2%;
+    }
+    .contact p {
+        text-align: left;
+    }
+}

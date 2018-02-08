@@ -1,0 +1,55 @@
+<section class="container contact">
+    <h2 id="contact"><span>Me contacter</span></h2>
+
+    <h3>Julie Petit</h3>
+    <img src="www/img/Julie-photo-BnW.png"  title="photo de Julie Petit">
+
+    <h4><span>Pour plus d'informations n'hésitez pas à me contacter.</span></h4>
+    <div class="flex column" id="contact-flex">
+        <div id="left">
+            <p><span>Téléphone:</span>       0496/94.60.94 </p>
+            <p><span>E-mail:</span>      juliepetitlogo@gmail.com</p>
+            <p><span>Adresse:</span>      45, rue du Villez 5060, Velaine-Sur-Sambre</p>
+            <p><span>Lien page Facebook:</span><a class="" href="https://www.facebook.com/Coaching-scolaire-et-des-jeunes-143979952879549/">        https://www.facebook.com/Coaching-scolaire-et-des-jeunes-143979952879549/</a></p>
+            <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.361463486768!2d4.609541315198411!3d50.47161419372152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c186f05f6e27d1%3A0x58647a887e7b2e00!2sRue+du+Villez+45%2C+5060+Sambreville%2C+Belgique!5e0!3m2!1sfr!2sfr!4v1517947705750" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    <form method="post" id="right">
+        <h2 class="title">Poser une question</h2>
+        <fieldset>
+            <ul>
+                <li>
+                    <label for="name">Nom : </label>
+                    <input type="text" placeholder="Nom" name="lastname" id="name" data-required>
+                    <p class="error">&nbsp;</p>
+                </li>
+                <li>
+                    <label for="prenom">Prenom : </label>
+                    <input type="text" placeholder="Prenom" name="name" id="prenom" data-required>
+                    <p class="error">&nbsp;</p>
+                </li>
+                <li>
+                    <label for="phone">Téléphone : </label>
+                    <input type="text" placeholder="Télephone" name="number" id="phone" data-required data-type="positive-integer" data-min="8">
+                    <p class="error">&nbsp;</p>
+                </li>
+                <li>
+                    <label for="mail">Adresse mail : </label>
+                    <input type="text" placeholder="a@a.com" name="mail" id="mail" data-required data-type="email">
+                    <p class="error">&nbsp;</p>
+                </li>
+                <li>
+                    <label for="question">Question : </label>
+                    <textarea type="text" placeholder="Question" name="question" id="question" data-required data-min="20"></textarea>
+                    <p class="error">&nbsp;</p>
+                </li>
+                <li>
+                    <input type="submit" name="envoyer">
+
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</div>
+</section>
+
+

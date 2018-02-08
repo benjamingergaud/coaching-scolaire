@@ -1,0 +1,28 @@
+<section class ="container login">
+    <form method="POST">
+        <ul>
+            <li>
+                <label for="mail">Votre adresse email:</label>
+                <input type="text" name="email" placeholder="email"
+                       data-required
+                       data-name="email"
+                       data-type="email"
+                >
+                <p class="error">&nbsp;</p>
+            </li>
+            <li>
+                <label for="password">Votre mot de passe:</label>
+                <input type="password" name="password" placeholder="Password"
+                       data-required
+                       data-min="6"
+                       data-name="mot de passe"
+                       data-type="password"
+                >
+                <p class="error">&nbsp;</p>
+            </li>
+            <li>
+                <button type="submit" name="login" value="connexion"">Se connecter</button>
+            </li>
+        </ul>
+    </form>
+</section>

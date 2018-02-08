@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?= $page ?></title>
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Lien(s) Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+    <!-- Liens font awesome normalize CSS JS bootstrap -->
+
+    <link href="www/css/normalize.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="www/js/class/Formfilter.class.js"></script>
+    <script src="www/js/main.js"></script>
+
+    <!-- On charge toujours notre css en dernier -->
+    <link href="www/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header id="header-nav">
+    <nav id="discover">
+        <a id="logo" href="index.php?page=home" title="logo du site de coaching scolaire"><img src="www/img/logo-coaching-scolaire.png" alt="logo du site de coaching scolaire"></a>
+        <h1>Coaching scolaire</h1>
+    </nav>
+
+    <nav class="flex" id="nav">
+        <div>
+            <a href="index.php?page=home" title="Offre de coaching scolaire"><i class="fa fa-home"></i><span class="nav-text">Accueil</span></a>
+        </div>
+
+        <div><i class="fa fa-user"></i> <span class="nav-text">Le coaching</span>
+            <ul class="sub-menu">
+                <li><a href="index.php?page=definition" title="Définition du coaching scolaire"><i class="fa fa-pagelines"></i>Définition</a></li>
+                <!--<li><a href="index.php?page=implications" title="Implications du coaching scolaire"><i class="fa fa-pagelines"></i>Implications</a></li>
+                <li><a href="index.php?page=benefices" title="Les bénéfices retirés par l'élève"><i class="fa fa-pagelines"></i>Bénéfices</a></li>
+
+            --></ul>
+        </div>
+
+        <div><i class="fa fa-pencil"></i> <span class="nav-text">Rendez-vous</span>
+            <ul class="sub-menu">
+                <li><a href="index.php?page=premier_contact" title="Fiche de premier contact"><i class="fa fa-pagelines"></i><span class="nav-text">Fiche de </span>Premier contact</a></li>
+                <!--<li><a href="index.php?page=contrat_coaching" title="Contrat coaching"><i class="fa fa-pagelines"></i>Contrat coaching</a></li>-->
+                <li><a href="index.php?page=tarifs" title="Tarifs"><i class="fa fa-pagelines"></i>Tarifs</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="index.php?page=contact" title="How to reach met"><i class="fa fa-envelope"></i><span class="nav-text">Contact</span></a>
+        </div>
+    </nav>
+
+
+</header>
+
+<main>
+    <!-- inclusion du template -->
+    <?php if(file_exists("www/$page.phtml")): ?>
+        <?php include "www/$page.phtml"; ?>
+    <?php else:?>
+        <?php include "www/$page/$page.phtml"; ?>
+    <?php endif; ?>
+    <!-- fin du template -->
+
+</main>
+<div id="infobulle">
+    <h4>Téléphone : </h4>
+    <p>0496/94.60.94</p>
+</div>
+<footer>
+    <nav class="flex">
+	    <?php if($userSession->isLogged()):?>
+            <a href="index.php?page=Admin" title="Espace administrateur"><i class="material-icons">folder_shared</i><span class="nav-text"> Administrateur </span></a>
+            <a href="index.php?page=register" title="Inscription à l'espace administrateur"><i class="material-icons">person_add</i> <span class="nav-text">Register</span> </a>
+            <a href="index.php?page=disconnect" title="Se déconnecter"><i class="material-icons">person_outline</i><span class="nav-text"> Se déconnecter </span></a>
+        <?php else:?>
+            <a href="index.php?page=login" title="Se connecter"><i class="material-icons">person</i><span class="nav-text"> Se connecter </span></a>
+        <?php endif;?>
+        <a href="index.php?page=contact" title="How to reach me"><i class="material-icons">mail</i><span class="nav-text">Contact</span></a>
+        <a href="https://www.facebook.com/Coaching-scolaire-et-des-jeunes-143979952879549/" target="_blank" title="Reach me on Facebook"><i class="fa fa-facebook"></i><span class="nav-text">Facebook</span></a>
+        <a href="index.php?page=premier_contact" title ="Prendre un rendez-vous"><i class="fa fa-pencil"></i><span class="nav-text">Rendez-vous</span></a>
+    </nav>
+
+    <a href="index.php?page=home" title="Retour vers la page d'accueil"><img src="www/img/logo-coaching-scolaire.png"></a>
+    <p>Copyright 2017 -  All Rights Reserved - Julie Petit Coaching Scolaire</p>
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<?php if ($userSession->isLogged()):?>
+<main class ="container premier_contact">
+	<h2><span>Formulaire de premier contact à remplir </span></h2>
+	<form method="post">
+		<div class="error">
+			<p><?= $error ?></p>
+		</div>
+		<ul>
+			<li>
+				<label for="name">Nom & prénom du jeune:</label>
+				<input id="name" type="text" name="name" placeholder="nom et prénom" value="<?=htmlspecialchars($form["name"])?>"
+				       data-required
+				       data-name="prénom"
+				       data-name="nom"
+				>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="age">Âge:</label>
+				<input id="age" type="text" name="age" placeholder="son âge" value="<?=htmlspecialchars($form["âge"])?>"
+				       data-required
+				       data-name="âge"
+				       data-type="positive-integer"
+				>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="contact">Contact:</label>
+				<input id="contact" type="text" name="contact" placeholder="contact" value="<?=htmlspecialchars($form["contact"])?>"
+				       data-required
+				       data-name="contact"
+				>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="email">Votre mail:</label>
+				<input type="text" name="mail" placeholder="adresse mail" value="<?=htmlspecialchars($form["mail"])?>" data-required data-type="email">
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="number">Votre numéro de téléphone:</label>
+				<input type="text" name="number" placeholder="numéro de téléphone" value="<?=htmlspecialchars($form["number"])?>" data-required data-type="positive-integer" data-min="8">
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="école">École:</label>
+				<input id="school" type="text" name="school" placeholder="son école" value="<?=htmlspecialchars($form["school"])?>"
+				       data-required
+				       data-name="contact"
+				>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="niveau_etude">Année d'études:</label>
+				<input id="school_year" type="text" name="niveau_etude" placeholder="son année d'études" value="<?=htmlspecialchars($form["niveau_etude"])?>"
+				       data-required
+				       data-name="niveau_etude"
+				>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="options">Options:</label>
+				<textarea rows="3" name="options" placeholder="options"  data-required data-min="20" ><?=htmlspecialchars($form["options"])?></textarea>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="results">Résultats (succès et échecs):</label>
+				<textarea rows="8" name="results" placeholder="matières réussies et échecs" data-required data-min="40" ><?=htmlspecialchars($form["results"])?></textarea>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="motivation">Pourquoi faites-vous appel à un coach scolaire ?</label>
+				<textarea rows="4" name="motivation" placeholder="raisons" data-required data-min="40" ><?=htmlspecialchars($form["motivation"])?></textarea>
+				<p class="error">&nbsp;</p>
+			</li>
+			<li>
+				<label for="attentes">Quelles sont vos attentes en ce qui concerne mon intervention ?</label>
+				<textarea rows="4" name="attentes" placeholder="attentes" data-required data-min="40" ><?=htmlspecialchars($form["attentes"])?></textarea>
+				<p class="error">&nbsp;</p>
+			</li>
+			<p> Veuillez essayer d'être le/la plus précis(e) possible dans vos réponses aux questions ouvertes, merci.</p>
+			<p> Venir avec le dernier bulletin de l'enfant/étudiant à la première rencontre. Merci.</p>
+			<li>
+				<button type="submit" name="Premier_contact" value="<?=$id?>">Valider</button>
+			</li>
+		</ul>
+	</form>
+</main>
+<?php else:?>
+	<?php header("Location: index.php?page=login");?>
+<?php endif;?>

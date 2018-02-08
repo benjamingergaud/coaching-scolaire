@@ -1,0 +1,51 @@
+<?php if ($userSession->isLogged()):?>
+<section id="admin">
+    <h2><span>Espace administrateur</span></h2>
+    <section>
+        <?php if(!empty($forms)):?>
+        <table>
+            <caption>
+                Formulaires de premier contact
+            </caption>
+            <tr>
+                <th>Nom & prénom</th>
+                <th>Âge</th>
+                <th>Contact</th>
+                <th>Niveau d'étude</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>Date d'envoi</th>
+                <th>Gérer</th>
+
+            </tr>
+            <?php foreach($forms as $form): ?>
+
+                <tr <?php if($form['status']==1) echo "class = 'archives'"?>>
+                    <td><?= htmlspecialchars($form['name']) ?></td>
+                    <td><?= htmlspecialchars($form['âge']) ?></td>
+                    <td><?= htmlspecialchars($form['contact']) ?></td>
+                    <td><?= htmlspecialchars($form['niveau_etude'] )?></td>
+                    <td><?= htmlspecialchars($form['number'] )?></td>
+                    <td><?= htmlspecialchars($form['mail'] )?></td>
+                    <td><?= htmlspecialchars($form['post_date'] )?></td>
+                    <td>
+                        <a title="Détails" href="index.php?page=show_contact&id=<?= $form['id']?>&action=show"><i class="material-icons button">info</i></a>
+                        <a title="Supprimer" href="index.php?page=Admin&id=<?= $form['id'] ?>&action=delete"><i class="material-icons button">remove_circle</i></a>
+                        <?php if($form["status"] == 0 ):?>
+                        <a title="Archiver" href="index.php?page=Admin&id=<?= $form['id'] ?>&action=archive"><i class="material-icons button">archive</i></a>
+                        <?php else: ?>
+                        <a title="Désarchiver" href="index.php?page=Admin&id=<?= $form['id'] ?>&action=unarchive"><i class="material-icons button">unarchive</i></a>
+                        <?php endif;?>
+                        <a title="télécharger" href="index.php?page=Admin&id=<?= $form['id'] ?>&action=download" target="_blank"><i class="material-icons button">file_download</i> </a>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+        </table>
+        <?php else: ?>
+        <p>Il n'y a aucun formulaire de contact à afficher pour le momment</p>
+        <?php endif;?>
+    </section>
+</section>
+<?php else:?>
+    <?php header("Location:index.php?page=login")?>
+<?php endif;?>
