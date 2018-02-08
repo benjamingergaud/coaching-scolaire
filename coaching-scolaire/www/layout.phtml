@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $page ?></title>
+    <title><? echo ($page==="home")? "Julie Petit - Coaching Scolaire" :  $page ?></title>
 
     <meta charset="UTF-8">
-
+    <meta property="og:site_name" content="jplo.be" />
+    <meta property="og:title" content="Julie Petit, Coaching scolaire - <?= $page?>" />
+    <meta property="og:description" content="Julie Petit, Coaching scolaire" />
+    <meta name="description" content="Julie Petit, Coaching scolaire">
     <!-- Responsive -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
